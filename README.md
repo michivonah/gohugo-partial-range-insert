@@ -30,6 +30,6 @@ So the order of the sections can be defined via YAML (`home_sections.yml`):
 ```
 
 ## Reference
-The repo was created because I was facing an issue with this behaviour. But in this demo repo the issue didn't happend. So here you see, how it should work.
+The repo was created because I was facing an issue with this behaviour. When using go templates the partials don't work right.
 
 - My issue: https://discourse.gohugo.io/t/insert-partial-via-variable-from-range/56542

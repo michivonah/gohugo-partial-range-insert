@@ -1,9 +1,14 @@
 
+    <h1>With range loop</h1>
 
     {{ range .Site.Data.home_sections }}
     <p>{{ .file }}</p>
     {{ partial .file . }}
     {{ end }}
+
+    <hr>
+    <h1>Without range loop</h1>
+    {{ partial "projects.html" . }}
 
     <!-- {{ partial "about.html" . }}
 

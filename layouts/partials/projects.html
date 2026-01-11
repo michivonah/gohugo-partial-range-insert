@@ -1,4 +1,20 @@
-<div class="projects">
-    <h1>Projects</h1>
-    <p>Some projects</p>
+<p style="background: blue;">So this is always shown</p>
+{{ with .Site.GetPage "projects" }}
+<p style="background: red;">And this isn't shown, when inserted via the range loop</p>
+
+
+<div id="{{ .Params.slug }}">
+    <div>
+        <h1>{{ .Title }}</h1>
+
+        <div>
+            {{ $cards := where .Site.RegularPages "Section" "projects" }}
+            {{ range first 3 $cards }}
+            <div>
+                <p>{{ .Title }}</p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
 </div>
+{{ end }}
