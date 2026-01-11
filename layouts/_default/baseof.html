@@ -3,7 +3,7 @@
 
     {{ range .Site.Data.home_sections }}
     <p>{{ .file }}</p>
-    {{ partial .file . }}
+    {{ partial .file $ }}
     {{ end }}
 
     <hr>
