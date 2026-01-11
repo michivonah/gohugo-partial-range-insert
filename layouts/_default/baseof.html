@@ -1,0 +1,12 @@
+
+
+    {{ range .Site.Data.home_sections }}
+    <p>{{ .file }}</p>
+    {{ partial .file . }}
+    {{ end }}
+
+    <!-- {{ partial "about.html" . }}
+
+    {{ partial "projects.html" . }}
+
+    {{ partial "about.html" . }} -->
